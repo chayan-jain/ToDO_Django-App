@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+    {% block body_block %}
+
+      <h1>Delete {{todo_details.Event_Name}} ?</h1>
+      <form method="post">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-danger" name="" value="Delete">
+        
+      </form>
+    {% endblock %}
+
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+
+  <div class="jumbotron">
+
+      <ul>
+        <li><h3>Event Name::{{todo_details.Event_Name}}</h3></li>
+        <li><h3>Event Date::{{todo_details.Event_Date}}</h3></li>
+        <li><h3>Event Description::{{todo_details.Event_Description}}</h3></li>
+        <br>
+        <br>
+      </ul>
+
+    </div>
+    <div class="container">
+      <p><a class="btn btn-warning" href="{% url 'app1:update' pk=todo_details.pk %}">Update</a></p>
+      <p> <a class="btn btn-danger" href="{% url 'app1:delete' pk=todo_details.pk %}">Delete</a> </p>
+    </div>
+
+  </body>
+</html>
